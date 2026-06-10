@@ -58,7 +58,7 @@ export default function StickyNote({ message, name, colorIndex = 0, onDelete }) 
             aria-expanded={isExpanded}
             onClick={() => setIsExpanded((expanded) => !expanded)}
           >
-            {isExpanded ? 'Less' : 'More'}
+            {isExpanded ? '..less' : '....more'}
           </button>
         )}
         <p className="message-from">- {name || 'Anonymous'}</p>
