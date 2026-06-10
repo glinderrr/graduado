@@ -13,7 +13,15 @@
   justify-content: space-between;
   cursor: pointer;
   transition: box-shadow 0.2s;
-  font-family: 'Comic Sans MS', 'Segoe Print', cursive;
+  font-family:
+    'Comic Sans MS',
+    'Chalkboard SE',
+    'Segoe Print',
+    'Marker Felt',
+    'Noteworthy',
+    ui-rounded,
+    system-ui,
+    sans-serif;
 }
 
 .sticky-note-expanded {
@@ -140,4 +148,11 @@
 
 .delete-btn:hover {
   color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .message-text {
+    font-size: 15px;
+    line-height: 1.45;
+  }
 }
