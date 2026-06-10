@@ -1,0 +1,183 @@
+.home-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(30, 20, 45, 0.28), rgba(30, 20, 45, 0.36)),
+    url('../assets/graduation-background.jpg');
+  background-color: #8d8588;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 40px 20px;
+}
+
+.header {
+  width: fit-content;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto 60px;
+  padding: 24px 40px;
+  color: white;
+  background: rgba(32, 22, 48, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(25, 16, 39, 0.22);
+  backdrop-filter: blur(5px);
+}
+
+.title {
+  font-size: 48px;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.48);
+}
+
+.subtitle {
+  font-size: 20px;
+  margin: 0 0 24px 0;
+  opacity: 0.95;
+}
+
+.add-message-btn,
+.add-message-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  background: #f6efe7;
+  color: #332a26;
+  border: 1px solid rgba(51, 42, 38, 0.18);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(20, 14, 12, 0.18);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-message-btn:hover,
+.add-message-btn-secondary:hover {
+  background: #fffaf5;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(20, 14, 12, 0.22);
+}
+
+.add-message-btn:focus-visible,
+.add-message-btn-secondary:focus-visible {
+  outline: 2px solid #f6efe7;
+  outline-offset: 3px;
+}
+
+.add-message-btn:active,
+.add-message-btn-secondary:active {
+  transform: translateY(0);
+}
+
+.add-message-btn-secondary {
+  padding: 12px 24px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.sticky-notes-wall {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-content: start;
+  gap: 30px 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 600px;
+  padding: 40px;
+}
+
+.sticky-note-wrapper {
+  position: relative;
+  width: 200px;
+  min-height: 200px;
+  justify-self: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sticky-note-wrapper:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.sticky-note-wrapper:nth-child(3n) {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.loading,
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+.empty-state {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.empty-state p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 20px 10px;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .header {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 1.16;
+    margin-bottom: 18px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .sticky-notes-wall {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px 12px;
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  .sticky-note-wrapper {
+    width: 180px;
+    min-height: 200px;
+  }
+}

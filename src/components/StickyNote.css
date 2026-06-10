@@ -1,0 +1,143 @@
+.sticky-note {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  padding: 16px;
+  background: var(--note-color);
+  border-radius: 4px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 -18px 24px rgba(0, 0, 0, 0.025);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  font-family: 'Comic Sans MS', 'Segoe Print', cursive;
+}
+
+.sticky-note-expanded {
+  height: auto;
+  min-height: 180px;
+}
+
+.sticky-note-yellow {
+  --note-color: #fff3a6;
+}
+
+.sticky-note-pink {
+  --note-color: #ffc7d9;
+}
+
+.sticky-note-blue {
+  --note-color: #bfe3ff;
+}
+
+.sticky-note-green {
+  --note-color: #c9f2c7;
+}
+
+.sticky-note-purple {
+  --note-color: #dfccff;
+}
+
+.sticky-note-orange {
+  --note-color: #ffd09d;
+}
+
+.sticky-note-red {
+  --note-color: #ffb9b5;
+}
+
+.sticky-note-indigo {
+  --note-color: #c8ccff;
+}
+
+.sticky-note:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-note-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message-text {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+  flex: 1;
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.message-text-expanded {
+  display: block;
+  overflow: visible;
+}
+
+.more-btn {
+  align-self: flex-start;
+  margin: 5px 0 0;
+  padding: 0;
+  background: none;
+  color: #4d4743;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  font: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  color: #171411;
+}
+
+.more-btn:focus-visible {
+  outline: 2px solid rgba(51, 51, 51, 0.6);
+  outline-offset: 3px;
+}
+
+.message-from {
+  font-size: 12px;
+  margin: 8px 0 0 0;
+  color: #555;
+  font-weight: bold;
+  text-align: right;
+  font-style: italic;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.sticky-note:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  color: #d32f2f;
+}
