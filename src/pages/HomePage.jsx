@@ -43,9 +43,13 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <header className="header">
-        <h1 className="title">🎓 Marian's Graduation Board 🎓</h1>
+        <h1 className="title">Happy birthday Andy🥳❤️</h1>
         <p className="subtitle">
-          Congratulations Meg, we love you and are so proud of you!
+          Wishing you a year filled with happiness, good health, unforgettable
+          memories, and endless success. Thank you for being such an amazing
+          friend and for bringing so much positivity wherever you go. May this
+          new chapter be your best one yet. Here's to celebrating you today and
+          always. Happy Birthday! 🥳❤️
         </p>
         <button
           className="add-message-btn"
@@ -66,13 +70,7 @@ export default function HomePage() {
           <div className="loading">Loading messages...</div>
         ) : messages.length === 0 ? (
           <div className="empty-state">
-            <p>No messages yet. Be the first to congratulate Marian!</p>
-            <button
-              className="add-message-btn-secondary"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Leave a message
-            </button>
+            <p>No messages yet. Be the first to wish Andy a happy birthday</p>
           </div>
         ) : (
           messages.map((msg, index) => (
