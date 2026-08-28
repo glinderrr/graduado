@@ -94,7 +94,7 @@ export default function MessageModal({ isOpen, onClose, onMessageAdded }) {
                 <label htmlFor="message">Your Birthday Message</label>
                 <textarea
                   id="message"
-                  placeholder="Write your congratulatory message here..."
+                  placeholder="Write your birthday message here..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   maxLength="300"
