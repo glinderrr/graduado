@@ -75,7 +75,7 @@ export default function MessageModal({ isOpen, onClose, onMessageAdded }) {
               ×
             </button>
 
-            <h2 className="modal-title">Type in your message</h2>
+            <h2 className="modal-title">Type your message</h2>
 
             <form onSubmit={handleSubmit} className="message-form">
               <div className="form-group">
@@ -91,7 +91,7 @@ export default function MessageModal({ isOpen, onClose, onMessageAdded }) {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Your Congratulations Message</label>
+                <label htmlFor="message">Your Birthday Message</label>
                 <textarea
                   id="message"
                   placeholder="Write your congratulatory message here..."
@@ -112,7 +112,7 @@ export default function MessageModal({ isOpen, onClose, onMessageAdded }) {
                 disabled={loading}
                 className="submit-btn"
               >
-                {loading ? 'Sending...' : 'Send Congratulations'}
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </motion.div>
